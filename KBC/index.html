@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="vedio/x-icon" href="">
+
+    <title>KBC | kaun Banega Corepati </title>
+    <link rel="stylesheet" href="style.css"> <!-- Linking to the CSS file -->
+</head>
+<body>
+    <!-- Intro Screen -->
+    <div class="intro-screen" id="introScreen">
+        <h1>Welcome to KBC Game!</h1>
+        <p>Get ready to play and win big prizes!</p>
+        <button id="startBtn">Start Game</button>
+    </div>
+
+    <div class="content-container">
+        <!-- Question Box -->
+        <div class="question-box" id="questionBox">
+            <img id="questionImage" src="" alt="question image">
+            <h2 id="question">Loading...</h2>
+            <div class="options">
+                <div class="option" onclick="answer('option1')" id="option1">Option 1</div>
+                <div class="option" onclick="answer('option2')" id="option2">Option 2</div>
+                <div class="option" onclick="answer('option3')" id="option3">Option 3</div>
+                <div class="option" onclick="answer('option4')" id="option4">Option 4</div>
+            </div>
+        </div>
+
+        <!-- Result -->
+        <div class="result" id="result" style="display: none;">
+            <p id="message"></p>
+            <p id="prize" class="prize"></p>
+            <button class="btn" id="nextBtn" onclick="nextQuestion()" style="display: none;">Next Question</button>
+        </div>
+
+        <!-- Restart Button -->
+        <button class="btn" id="restartBtn" onclick="restartGame()" style="display: none;">Restart Game</button>
+    </div>
+
+    <audio id="kbcSound">
+        <source src="kbc-question.mp3" type="audio/mp3">
+    </audio>
+    
+
+    <script src="script.js"></script> <!-- Linking to the JS file -->
+</body>
+</html>
